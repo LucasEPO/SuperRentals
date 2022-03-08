@@ -17,7 +17,6 @@ module('Acceptance | super rentals', function (hooks) {
     await click('.jumbo a.button');
 
     assert.equal(currentURL(), '/about');
-    
   });
 
   test('visiting /about', async function (assert) {
@@ -50,7 +49,7 @@ module('Acceptance | super rentals', function (hooks) {
 
   test('navigation using the nav-bar', async function (assert) {
     await visit('/');
-    
+
     assert.dom('nav').exists();
     assert.dom('nav a.menu-index').hasText('SuperRentals');
     assert.dom('nav a.menu-about').hasText('About');
