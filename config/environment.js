@@ -7,6 +7,7 @@ module.exports = function (environment) {
     rootURL: '/',
     locationType: 'history',
     EmberENV: {
+      RAISE_ON_DEPRECATION: true,
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
         // e.g. EMBER_NATIVE_DECORATOR_SUPPORT: true
@@ -46,6 +47,9 @@ module.exports = function (environment) {
   if (environment === 'production') {
     // here you can enable a production-specific feature
   }
+
+  ENV.MAPBOX_ACCESS_TOKEN =
+    'pk.eyJ1IjoibHVjYXNlcG8iLCJhIjoiY2wwaW83ZGd5MDJqNjNicXRndDhyczdxbiJ9.gFr4H0FOqeQx_pdTLZmTdw';
 
   return ENV;
 };
